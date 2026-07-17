@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 11
+names: ['Person', 'boots', 'gloves', 'goggles', 'helmet', 'no_boots', 'no_gloves', 'no_goggle', 'no_helmet', 'none', 'vest']
+
+roboflow:
+  workspace: convert-i7psp
+  project: construction-ppe-unha4
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/convert-i7psp/construction-ppe-unha4/dataset/1

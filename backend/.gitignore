@@ -1,0 +1,46 @@
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Database files
+visiondesk.db
+
+# Vector store
+chroma_db/
+
+# Upload and generated content
+app/uploads/
+app/generated_reports/
+
+# Kiro spec files
+.kiro/
+
+# Virtual environment
+venv/
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+
+# Test and type check caches
+.pytest_cache/
+.mypy_cache/
+
+# Logs
+*.log
+
+# YOLO training runs
+runs/
+
+# PyTorch model files (large binaries)
+*.pt
+
+# Datasets
+datasets/
