@@ -193,3 +193,4 @@ class VectorStore:
                 "Delete by document_id %s: %s (may be safe to ignore)",
                 document_id, str(exc),
             )
+

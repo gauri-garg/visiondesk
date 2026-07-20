@@ -16,31 +16,31 @@ class TextCleaner:
         """Apply all 5 cleaning steps to text. Returns cleaned string."""
         result = text
 
-        # Step 1: Remove null bytes
+        # Remove null bytes
         try:
             result = result.replace('\x00', '')
         except Exception as exc:
             logger.warning("TextCleaner step 1 (null bytes) failed: %s", exc)
 
-        # Step 2: Remove control characters except \n and \t
+        # Remove control characters except \n and \t
         try:
             result = re.sub(r'[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]', '', result)
         except Exception as exc:
             logger.warning("TextCleaner step 2 (control chars) failed: %s", exc)
 
-        # Step 3: Collapse more than 2 consecutive blank lines into 2
+        # Collapse more than 2 consecutive blank lines into 2
         try:
             result = re.sub(r'\n{3,}', '\n\n', result)
         except Exception as exc:
             logger.warning("TextCleaner step 3 (blank lines) failed: %s", exc)
 
-        # Step 4: Collapse runs of more than 2 consecutive spaces/tabs into one space
+        # Collapse runs of more than 2 consecutive spaces/tabs into one space
         try:
             result = re.sub(r'[ \t]{3,}', ' ', result)
         except Exception as exc:
             logger.warning("TextCleaner step 4 (whitespace) failed: %s", exc)
 
-        # Step 5: Remove duplicate paragraphs (blank-line delimited)
+        # Remove duplicate paragraphs (blank-line delimited)
         try:
             paragraphs = result.split('\n\n')
             seen = []

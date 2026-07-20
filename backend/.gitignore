@@ -41,6 +41,7 @@ runs/
 
 # PyTorch model files (large binaries)
 *.pt
+!app/ai/models/visiondesk_ppe.pt
 
 # Datasets
 datasets/

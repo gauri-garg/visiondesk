@@ -3,7 +3,7 @@ from ultralytics import YOLO
 
 from app.services.compliance_service import compliance_service
 
-MODEL_PATH = "app/ai/models/visiondesk_ppe.pt"
+MODEL_PATH = "app/ai/models/"
 
 model = YOLO(MODEL_PATH)
 
