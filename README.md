@@ -335,6 +335,6 @@ Educational project — VisionDesk AI is developed as part of the Infosys team i
 ---
 
 ## Credits
- Powered by YOLOv8 (Ultralytics), Google Gemini, LangChain, ChromaDB, and FastAPI.
+ Made by Gauri Garg(github.com/gauri-garg), Powered by YOLOv8 (Ultralytics), Google Gemini, LangChain, ChromaDB, and FastAPI.
 
 For questions or issues, open an issue in this repository.
